@@ -1,17 +1,20 @@
 <?php
 
 if (isset($_GET['word'])) {
-  // $dict = array('race', 'boat', 'file', 'print');
   $word = $_GET['word'];
+  $dictionary = 'dict.txt';
 
   $word = strtolower($word);//need lowercase
 
   $letters = str_split($word);
 
-  for($i=0;$i<strlen($word);$i++) {
-    $letters[$i]=substr($word,$i,1);
+
+  //compares dictionary after split
+  for ($i=0; $i<strlen($word); $i++) {
+    if ($letters[$i]==$dictionary[$i]) {
+        echo $test[$i]."<br />";
+    }
   }
-  shuffle($letters);
-  $anagram=implode($letters);
-  echo "One anagram of $word is $anagram.";
+
+
 }
