@@ -10,7 +10,7 @@ if (isset($_GET['word'])) {
 
 
   foreach ($dictionary as $thisword) {
-    if (isAnagram($thisword, $word)) {
+    test($thisword, $word) {
       echo "Anagram for \$word: $thisword[$i]. \n";
     }
   }
