@@ -19,7 +19,9 @@ if (isset($_GET['word'])) {
   function test($word1, $word2) {
     if (isAnagram($word1, $word2)) {
       foreach ($dictionary as $word) {
-        echo "true";
+        if ($dictionary[$i] == $word) {
+          echo "true";
+        }
       }
     }
   }
