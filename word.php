@@ -12,7 +12,7 @@ if (isset($_GET['word'])) {
   //compares dictionary after split
   for ($i=0; $i<strlen($word); $i++) {
     if ($letters[$i]==$dictionary[$i]) {
-        echo $test[$i]."<br />";
+        echo $letters[$i]."<br />";
     }
   }
 
