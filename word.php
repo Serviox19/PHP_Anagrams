@@ -2,27 +2,22 @@
 
 if (isset($_GET['word'])) {
   $word = $_GET['word'];
-  $dictionary = 'dict.txt';
+  $dictionary = file('dict.txt');
 
   $word = strtolower($word);//need lowercase
 
   $letters = str_split($word);
 
 
-  //compares dictionary after split
-  foreach ($i=0; $i<strlen($word); $i++) {
-    if ($letters[$i]==$dictionary[$i]) {
-      echo $letters[$i]."<br />";
+  foreach ($dictionary as $thisword) {
+    if (isAnagram($thisword, $word)) {
+      echo "Anagram for \$word: $thisword[$i]. \n";
     }
   }
 
   function test($word1, $word2) {
     if (isAnagram($word1, $word2)) {
-      foreach ($dictionary as $word) {
-        if ($dictionary[$i] == $word) {
-          echo "true";
-        }
-      }
+      echo "true";
     }
   }
 
