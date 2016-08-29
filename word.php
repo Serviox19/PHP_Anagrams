@@ -10,10 +10,22 @@ if (isset($_GET['word'])) {
 
 
   //compares dictionary after split
-  for ($i=0; $i<strlen($word); $i++) {
+  foreach ($i=0; $i<strlen($word); $i++) {
     if ($letters[$i]==$dictionary[$i]) {
-        echo $letters[$i]."<br />";
+      echo $letters[$i]."<br />";
     }
+  }
+
+  function test($word1, $word2) {
+    if (isAnagram($word1, $word2)) {
+      foreach ($dictionary as $word) {
+        echo "true";
+      }
+    }
+  }
+
+  function isAnagram($a, $b) {
+    return(count_chars($a, 1) == count_chars($b, 1));
   }
 
 
