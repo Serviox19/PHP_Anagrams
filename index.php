@@ -5,6 +5,7 @@
     <title>PHP Challenge</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
 
@@ -17,6 +18,6 @@
       <h3></h3>
     </div>
 
-  <script src="js/script.js"></script>
+
   </body>
 </html>

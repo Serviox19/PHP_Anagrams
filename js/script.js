@@ -1,20 +1,23 @@
 $(document).ready(function () {
-  $('#submit').on('click', function () {
+  $('#submit').on('click', function() {
     var word = $('#word').val();
+
+    var dataString = 'word=' + word;
 
     if (word === '') {
       alert('Type in a word Bro!');
     } else {
       $.ajax({
-        type: 'POST',
+        type: "POST",
         url: '../word.php',
-        data: word,
-        success: function (text) {
-          $('#word').val('');
+        data: dataString,
+        success: function (data) {
+          $('#word').val('');// clears form
+          console.log(word);
         }
       });
-    }
-
+    };
     return false;
+
   });
 });
