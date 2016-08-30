@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $('#submit').on('click', function() {
-    var word = $('#word').val();
+    var wordInput = $('#word').val();
 
-    var dataString = 'word=' + word;
+    var data = {word:wordInput};
 
     if (word === '') {
       alert('Type in a word Bro!');
@@ -10,10 +10,10 @@ $(document).ready(function () {
       $.ajax({
         type: "POST",
         url: '../word.php',
-        data: dataString,
-        success: function (data) {
+        data: data,
+        success: function(msg) {
           $('#word').val('');// clears form
-          console.log(word);
+          $('#response').html(msg);
         }
       });
     };
